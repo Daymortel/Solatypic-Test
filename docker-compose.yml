@@ -1,0 +1,35 @@
+version: '3'
+services:
+  # Service pour le backend
+  backend:
+    image: node:latest
+    ports:
+      - "3000:3000"
+    environment:
+      - DATABASE_URL=postgresql://user:password@db:5432/tasksdb
+    depends_on:
+      - db
+    # Ajoute d'autres configurations nécessaires pour ton backend
+
+  # Service pour la base de données PostgreSQL
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: tasksdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  # Service pour le frontend
+  frontend:
+    image: node:latest
+    ports:
+      - "80:80"
+    # Ajoute d'autres configurations nécessaires pour ton frontend
+
+# Définition des volumes
+volumes:
+  postgres-data:
