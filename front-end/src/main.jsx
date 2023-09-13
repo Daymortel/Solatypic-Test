@@ -24,7 +24,7 @@ const App = () => {
             <Route path="/auth/signup" element={<Signup />} />
             <Route path="/auth/signin" element={<Signin />} />
             <Route path="/tasks/create" element={<CreateTask />} />
-            <Route path="/tasks/update" element={<UpdateTask />} />
+            <Route path="/tasks/update/:id" element={<UpdateTask />} />
           </Routes>
           
         <Footer />

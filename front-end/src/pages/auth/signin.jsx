@@ -59,6 +59,7 @@ export const Signin = () => {
                         } else {
                             localStorage.setItem('token', data.token)
                             navigate('/')
+                            window.location.reload()
                             toast.success('Connecté avec succès !', {
                                 position: "top-right",
                                 autoClose: 5000,

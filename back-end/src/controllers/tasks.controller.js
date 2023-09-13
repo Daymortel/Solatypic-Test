@@ -11,6 +11,19 @@ const findAll = async (req, res) => {
     }
 }
 
+const findOne = async (req, res) => {
+    try {
+        const result = await Task.findOne({
+            where: {
+                id: req.params.id
+            }
+        });
+        res.send(result);
+    } catch (err) {
+        console.log(err.message);
+    }
+}
+
 const create = async (req, res) => {
     try {
         Task.create({
@@ -57,6 +70,7 @@ const destroy = async (req, res) => {
 
 module.exports = {
     findAll,
+    findOne,
     create,
     update,
     destroy
