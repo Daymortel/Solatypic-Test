@@ -91,23 +91,23 @@ export const UpdateTask = () => {
             <ToastContainer />
             <section>
                 <h2>Modifier une tâche</h2>
-                <form>
-                    <div>
-                        <label htmlFor="title">Titre</label>
-                        <input onChange={handleChange} type="text" name="title" placeholder="Titre" defaultValue={formValues.title} required />
+                <form className="form">
+                    <div className="col">
+                        <label className="form-label" htmlFor="title">Titre</label>
+                        <input onChange={handleChange} className="form-input" type="text" name="title" placeholder="Titre" defaultValue={formValues.title} required />
                     </div>
-                    <div>
-                        <label htmlFor="description">Description</label>
-                        <textarea onChange={handleChange} type="text" name="description" placeholder="Description" defaultValue={formValues.description} cols="30" rows="10" required></textarea>
+                    <div className="col">
+                        <label className="form-label" htmlFor="description">Description</label>
+                        <textarea onChange={handleChange} className="form-input" type="text" name="description" placeholder="Description" defaultValue={formValues.description} cols="30" rows="10" required></textarea>
                     </div>
-                    <div>
-                        <label htmlFor="status">Status</label>
-                        <select onChange={handleChange} name="status" defaultValue={formValues.status}>
+                    <div className="col">
+                        <label className="form-label" htmlFor="status">Status</label>
+                        <select onChange={handleChange} className="form-input" name="status" defaultValue={formValues.status}>
                             <option value="à faire">A faire</option>
                             <option value="fini">Fini</option>
                         </select>
                     </div>
-                    <button onClick={handleSubmit} type="submit">Modifier la tâche</button>
+                    <button onClick={handleSubmit} className="form-button" type="submit">Modifier la tâche</button>
                 </form>
             </section>
         </>

@@ -1,8 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ddd;
+}
+
+/* Header */
+.button-header {
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #008b8b;
+}
+
+.button-header a {
+    text-decoration: none;
+    color: #008b8b;
+}
+
 .button-plus {
-    background-color: darkcyan;
+    background-color: #008b8b;
+    color: #fff;
     border: none;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
     font-size: 120%;
+}
+
+.button-plus:hover {
+    background-color: #fff;
+    color: #008b8b;
+    border: #008b8b 1px solid;
+}
+
+/* Login */
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 300px;
+    margin: 150px 50% 0;
+    transform: translate(-50%);
+}
+
+.form-input {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-label {
+    text-align: center;
+}
+
+.form-button {
+    background-color: #008b8b;
+    border: none;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.form-button:hover {
+    background-color: #fff;
+    color: #008b8b;
+    border: #008b8b 1px solid;
+}
+
+.go-register {
+    margin-left: 50%;
+    transform: translate(-15%);
+}
+
+.go-register a {
+    text-decoration: none;
+    color: #008b8b;
+}
+
+/* Home */
+h1,
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #444;
+}
+
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.view-tasks {
+    margin: 0 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: #008b8b;
+    border-radius: 20px;
+    width: 200px;
+}
+
+.view-button {
+    background-color: #fff;
+    color: #008b8b;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.view-button:hover {
+    background-color: #008b8b;
+    color: #fff;
+    border: #fff 1px solid;
 }

@@ -79,14 +79,14 @@ export const Signup = () => {
         <>
             <ToastContainer />
             <section>
-                <form>
-                    <div>
-                        <label htmlFor="username">Nom d'utilisateur</label>
-                        <input onChange={handleChange} type="text" name="username" placeholder="Nom d'utilisateur" required />
+                <form className='form'>
+                    <div className='col'>
+                        <label className='form-label' htmlFor="username">Nom d'utilisateur</label>
+                        <input onChange={handleChange} className='form-input' type="text" name="username" placeholder="Nom d'utilisateur" required />
                     </div>
-                    <div>
-                        <label htmlFor="password">Mot de passe</label>
-                        <input onChange={handleChange} type="password" name="password" placeholder="Mot de passe" required />
+                    <div className='col'>
+                        <label className='form-label' htmlFor="password">Mot de passe</label>
+                        <input onChange={handleChange} className='form-input' type="password" name="password" placeholder="Mot de passe" required />
                     </div>
                     <div>
                         <ReCAPTCHA
@@ -94,7 +94,7 @@ export const Signup = () => {
                             ref={captchaRef}
                         />
                     </div>
-                    <button onClick={handleSubmit} type="submit">Inscription</button>
+                    <button onClick={handleSubmit} className='form-button' type="submit">Inscription</button>
                 </form>
             </section>
         </>

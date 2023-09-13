@@ -35,7 +35,7 @@ export const CreateTask = () => {
                     theme: "colored",
                 })
             } else {
-                const res = await fetch(`http://localhost:3000/tasks/${id}`, {
+                const res = await fetch('http://localhost:3000/tasks', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -69,24 +69,24 @@ export const CreateTask = () => {
             <ToastContainer />
             <section>
                 <h2>Ajouter une tâche</h2>
-                <form>
-                    <div>
-                        <label htmlFor="title">Titre</label>
-                        <input onChange={handleChange} type="text" name="title" placeholder="Titre" required />
+                <form className="form">
+                    <div className="col">
+                        <label className="form-label" htmlFor="title">Titre</label>
+                        <input onChange={handleChange} className="form-input" type="text" name="title" placeholder="Titre" required />
                     </div>
-                    <div>
-                        <label htmlFor="description">Description</label>
-                        <textarea onChange={handleChange} type="text" name="description" placeholder="Description" cols="30" rows="10" required></textarea>
+                    <div className="col">
+                        <label className="form-label" htmlFor="description">Description</label>
+                        <textarea onChange={handleChange} className="form-input" type="text" name="description" placeholder="Description" cols="30" rows="10" required></textarea>
                     </div>
-                    <div>
-                        <label htmlFor="status">Status</label>
-                        <select onChange={handleChange} name="status" defaultValue="">
+                    <div className="col">
+                        <label className="form-label" htmlFor="status">Status</label>
+                        <select onChange={handleChange} className="form-input" name="status" defaultValue="">
                             <option value="" disabled>Choisir</option>
                             <option value="à faire">A faire</option>
                             <option value="fini">Fini</option>
                         </select>
                     </div>
-                    <button onClick={handleSubmit} type="submit">Ajouter la tâche</button>
+                    <button onClick={handleSubmit} className="form-button" type="submit">Ajouter la tâche</button>
                 </form>
             </section>
         </>

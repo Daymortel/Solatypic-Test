@@ -94,24 +94,24 @@ export const Signin = () => {
         <>
             <ToastContainer />
             <section>
-                <form>
-                    <div>
-                        <label htmlFor="username">Nom d'utilisateur</label>
-                        <input onChange={handleChange} type="text" name="username" placeholder="Nom d'utilisateur" required />
+                <form className='form'>
+                    <div className='col'>
+                        <label className='form-label' htmlFor="username">Nom d'utilisateur</label>
+                        <input onChange={handleChange} className='form-input' type="text" name="username" placeholder="Nom d'utilisateur" required />
                     </div>
-                    <div>
-                        <label htmlFor="password">Mot de passe</label>
-                        <input onChange={handleChange} type="password" name="password" placeholder="Mot de passe" required />
+                    <div className='col'>
+                        <label className='form-label' htmlFor="password">Mot de passe</label>
+                        <input onChange={handleChange} className='form-input' type="password" name="password" placeholder="Mot de passe" required />
                     </div>
-                    <div>
+                    <div className='col'>
                         <ReCAPTCHA
                             sitekey={'6Le9Jo4gAAAAAII1JPoquZk4Z7wF93GLOrrBZjr0'}
                             ref={captchaRef}
                         />
                     </div>
-                    <button onClick={handleSubmit} type="submit">Connexion</button>
+                    <button onClick={handleSubmit} className='form-button' type="submit">Connexion</button>
                 </form>
-                <p>Pas encore de compte ? <a href="/auth/signup">Créer un compte</a></p>
+                <p className='go-register'>Pas encore de compte ? <a href="/auth/signup">Créer un compte</a></p>
             </section>
         </>
     )

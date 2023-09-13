@@ -1,5 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export const Header = () => {
 
+    const navigate = useNavigate()
     const auth = localStorage.getItem('token')
     
     const logout = () => {
@@ -10,11 +13,13 @@ export const Header = () => {
     return (
         auth ?
         <>
-            <button onClick={logout}>Déconnexion</button>
+            <button onClick={() => navigate('/')} className="button-header">Accueil</button>
+            <button onClick={logout} className="button-header">Déconnexion</button>
+            <button onClick={() => navigate('/tasks/create')} className="button-plus"><i className="bi bi-plus-lg"></i></button>
         </>
         :
         <>
-            <button><a href="/auth/signin">Connexion</a></button>
+            <button className="button-header"><a href="/auth/signin">Connexion</a></button>
         </>
     )
 }
