@@ -35,7 +35,7 @@ body {
     border: #008b8b 1px solid;
 }
 
-/* Login */
+/* Formulaires */
 .col {
     display: flex;
     flex-direction: column;
@@ -75,6 +75,7 @@ body {
     border: #008b8b 1px solid;
 }
 
+/* Login */
 .go-register {
     margin-left: 50%;
     transform: translate(-15%);
@@ -100,7 +101,7 @@ h2 {
 }
 
 .view-tasks {
-    margin: 0 20px;
+    margin: 20px 20px;
     padding: 20px;
     text-align: center;
     background-color: #008b8b;
